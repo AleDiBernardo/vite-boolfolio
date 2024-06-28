@@ -1,5 +1,7 @@
 <script>
 import AppProjectHome from './components/AppProjectHome.vue';
+import AppProjectHeader from './components/AppProjectHeader.vue';
+
 
 
 export default {
@@ -10,6 +12,7 @@ export default {
   },
   components: {
     AppProjectHome,
+    AppProjectHeader
   }
 };
 </script>
