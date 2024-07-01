@@ -18,15 +18,15 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <router-link class="nav-link" :to="'/'">Home</router-link>
+          <li class="nav-item" v-for="route in navigableRoutes" :key="route.path">
+            <router-link class="nav-link" :to="route.path">{{ route.label }}</router-link>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link class="nav-link" :to="'/about-us'">About</router-link>
           </li>
           <li class="nav-item">
             <router-link class="nav-link" :to="'/projects'">Projects</router-link>
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -34,7 +34,14 @@
 </template>
 
 <script>
-export default {};
+import { routes } from '../router.js';
+export default {
+    data(){
+        return{
+            navigableRoutes: routes.filter(route => route.label)
+        }
+    }
+};
 </script>
 
 <style>
