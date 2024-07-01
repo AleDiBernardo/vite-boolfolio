@@ -1,5 +1,5 @@
 <script>
-import ProjectHomePage from './style/pages/ProjectHomePage.vue';
+import HomePage from './style/pages/HomePage.vue';
 import AppProjectHeader from './components/AppProjectHeader.vue';
 
 
@@ -11,7 +11,7 @@ export default {
     };
   },
   components: {
-    ProjectHomePage,
+    HomePage,
     AppProjectHeader
   }
 };
