@@ -1,8 +1,8 @@
 <template>
     <div class="pagination">
-      <button @click="changePage(currentPage - 1)" :disabled="currentPage === 1">Previous</button>
-      <span>Page {{ currentPage }} of {{ totalPages }}</span>
-      <button @click="changePage(currentPage + 1)" :disabled="currentPage === totalPages">Next</button>
+      <button class="btn btn-primary" @click.prevent="changePage(currentPage - 1)" :disabled="currentPage === 1">Previous</button>
+      <span class="text-white fw-bold">Page {{ currentPage }} of {{ totalPages }}</span>
+      <button class="btn btn-primary" @click.prevent="changePage(currentPage + 1)" :disabled="currentPage === totalPages">Next</button>
     </div>
   </template>
   

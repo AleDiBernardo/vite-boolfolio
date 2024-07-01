@@ -1,5 +1,5 @@
 <script>
-import AppProjectHome from './components/AppProjectHome.vue';
+import ProjectHomePage from './style/pages/ProjectHomePage.vue';
 import AppProjectHeader from './components/AppProjectHeader.vue';
 
 
@@ -11,7 +11,7 @@ export default {
     };
   },
   components: {
-    AppProjectHome,
+    ProjectHomePage,
     AppProjectHeader
   }
 };
@@ -21,9 +21,11 @@ export default {
   <header>
     <AppProjectHeader/>
   </header>
-  <main>
-    <AppProjectHome/>
+  <main class="pt-5">
+    <router-view></router-view>
   </main>
 </template>
 
-<style></style>
+<style>
+
+</style>
