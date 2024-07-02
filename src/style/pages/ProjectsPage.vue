@@ -1,5 +1,6 @@
 <template>
    <div class="container mt-3 mb-3">
+    <h1 class="text-center text-white m-3 fw-bold">Projects</h1>
       <div class="row g-4 row-cols-lg-4 row-cols-md-3 row-cols-1">
         <div class="col" v-for="(project, index) in projects" :key="index">
           <router-link :to="{name: 'singleproject', params: {slug: project.slug}}" class="text-decoration-none">

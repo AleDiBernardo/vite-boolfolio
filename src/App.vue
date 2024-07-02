@@ -21,7 +21,7 @@ export default {
   <header>
     <AppProjectHeader/>
   </header>
-  <main class="pt-5">
+  <main class="pt-5 h-100">
     <router-view></router-view>
   </main>
 </template>

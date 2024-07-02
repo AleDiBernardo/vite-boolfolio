@@ -58,12 +58,12 @@ export default {
     axios
       .get(`http://127.0.0.1:8000/api/show/${slug}`)
       .then((resp) => {
-        console.log("pippo:" + resp.data.results);
+        // console.log("pippo:" + resp.data.results);
         this.project = resp.data.results;
       })
       .catch((err) => {
         if (err.response.status === 404) {
-          console.log("no project");
+        //   console.log("no project");
           this.$router.push({ name: "notfound" });
         }
       });
