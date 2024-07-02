@@ -2,7 +2,9 @@
    <div class="container mt-3 mb-3">
       <div class="row g-4 row-cols-lg-4 row-cols-md-3 row-cols-1">
         <div class="col" v-for="(project, index) in projects" :key="index">
-          <ProjectCard :project="project" />
+          <router-link :to="{name: 'singleproject', params: {slug: project.slug}}" class="text-decoration-none">
+            <ProjectCard :project="project" />
+          </router-link>
         </div>
       </div>
       <AppProjectPagination
